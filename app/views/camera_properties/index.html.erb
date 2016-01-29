@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Camera Properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Prop hash</th>
+      <th>Properties</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @camera_properties.each do |camera_property| %>
+      <tr>
+        <td><%= camera_property.name %></td>
+        <td><%= camera_property.prop_hash %></td>
+        <td><%= camera_property.properties %></td>
+        <td><%= link_to 'Show', camera_property %></td>
+        <td><%= link_to 'Edit', edit_camera_property_path(camera_property) %></td>
+        <td><%= link_to 'Destroy', camera_property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Camera property', new_camera_property_path %>

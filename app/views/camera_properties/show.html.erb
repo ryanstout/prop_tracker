@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @camera_property.name %>
+</p>
+
+<p>
+  <strong>Prop hash:</strong>
+  <%= @camera_property.prop_hash %>
+</p>
+
+<p>
+  <strong>Properties:</strong>
+  <%= @camera_property.properties %>
+</p>
+
+<%= link_to 'Edit', edit_camera_property_path(@camera_property) %> |
+<%= link_to 'Back', camera_properties_path %>
